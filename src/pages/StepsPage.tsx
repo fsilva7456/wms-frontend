@@ -12,7 +12,7 @@ const StepsPage: React.FC = () => {
   const [stepName, setStepName] = useState('');
   const [purpose, setPurpose] = useState('');
 
-  const baseUrl = 'https://wms-steps-service-production.up.railway.app';
+  const baseUrl = process.env.REACT_APP_STEPS_SERVICE_URL;
 
   const fetchSteps = async () => {
     try {

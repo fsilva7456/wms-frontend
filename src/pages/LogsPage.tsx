@@ -13,7 +13,7 @@ const LogsPage: React.FC = () => {
   const [logType, setLogType] = useState('');
   const [message, setMessage] = useState('');
 
-  const baseUrl = 'https://wms-logs-service-production.up.railway.app';
+  const baseUrl = process.env.REACT_APP_LOGS_SERVICE_URL;
 
   const fetchLogs = async () => {
     try {

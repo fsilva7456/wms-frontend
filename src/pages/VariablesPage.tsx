@@ -12,7 +12,7 @@ const VariablesPage: React.FC = () => {
   const [varName, setVarName] = useState('');
   const [varValue, setVarValue] = useState('');
 
-  const baseUrl = 'https://wms-variables-service-production.up.railway.app';
+  const baseUrl = process.env.REACT_APP_VARIABLES_SERVICE_URL;
 
   const fetchVariables = async () => {
     try {
